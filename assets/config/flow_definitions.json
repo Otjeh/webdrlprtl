@@ -1,0 +1,32 @@
+{
+  "flows": [
+    {
+      "type": "normalOrderDelivery",
+      "label": "Normal Order Delivery",
+      "commands": ["order", "intransit", "deliver", "accept"],
+      "includeInWebBatch": true,
+      "useBatchDealerAddresses": false
+    },
+    {
+      "type": "queue",
+      "label": "Queue Flow",
+      "commands": ["queue", "allocate", "accept"],
+      "includeInWebBatch": true,
+      "useBatchDealerAddresses": false
+    },
+    {
+      "type": "cancel",
+      "label": "Cancel Flow",
+      "commands": ["order", "cancel"],
+      "includeInWebBatch": true,
+      "useBatchDealerAddresses": false
+    },
+    {
+      "type": "cancelDifferentDealerAddress",
+      "label": "Cancel With Different Dealer Address",
+      "commands": ["order", "cancel"],
+      "includeInWebBatch": true,
+      "useBatchDealerAddresses": true
+    }
+  ]
+}
